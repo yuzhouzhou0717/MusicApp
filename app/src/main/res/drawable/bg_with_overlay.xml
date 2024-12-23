@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 第一层：背景图 -->
+<!--    <item android:drawable="@drawable/bg1"/>-->
+    <item android:drawable="@drawable/bg5"/>
+    <!-- 第二层：半透明的覆盖层，调整亮度 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#40000000"/> <!-- 半透明黑色层 -->
+        </shape>
+    </item>
+</layer-list>

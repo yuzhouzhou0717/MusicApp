@@ -1,0 +1,7 @@
+<resources>
+    <!-- 圆角样式 -->
+    <style name="CircularShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">32dp</item> <!-- 设置圆角半径 -->
+    </style>
+</resources>

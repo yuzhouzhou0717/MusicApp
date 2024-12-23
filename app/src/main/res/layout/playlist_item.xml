@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:gravity="center_vertical">
+
+    <!-- 歌曲名 -->
+    <TextView
+        android:id="@+id/songName"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="0.6"
+        android:text="Song Name"
+        android:textColor="@color/unselected_color"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- 歌手名 -->
+    <TextView
+        android:id="@+id/artistName"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="Artist Name"
+        android:textColor="@color/unselected_color"
+        android:textSize="14sp" />
+
+    <!-- 删除按钮 -->
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="删除歌曲"
+        android:padding="10dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_cha" />
+</LinearLayout>
+
+

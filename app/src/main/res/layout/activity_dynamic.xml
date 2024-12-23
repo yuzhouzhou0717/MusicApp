@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_color">
+
+    <!-- 播放器布局 -->
+    <!-- 播放列表容器，调整为播放器的上方 -->
+    <FrameLayout
+        android:id="@+id/playlistContainer22"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/playlist_background"
+        android:elevation="4dp">
+
+        <!-- 顶部选项框 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#f5f5f5"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/TextView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前播放列表"
+                android:textColor="@color/black" />
+
+            <!-- 播放按钮 -->
+            <ImageButton
+                android:id="@+id/loopModeButton22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_all2"
+                android:contentDescription="播放模式"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="5dp"
+                android:layout_marginEnd="10dp" />
+        </LinearLayout>
+
+        <!-- 播放列表的 RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:id="@+id/playlistRecyclerView" />
+    </FrameLayout>
+    <!-- 动态列表 -->
+    <LinearLayout
+        android:id="@+id/playerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:background="#f5f5f5"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!-- 当前歌曲名称 -->
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingEnd="0dp"
+            android:text="当前歌曲"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <!-- 上一首按钮 -->
+        <ImageButton
+            android:id="@+id/previousButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pre"
+            android:contentDescription="上一首按钮"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:layout_marginEnd="10dp" />
+        <!-- 播放按钮 -->
+        <ImageButton
+            android:id="@+id/imageButton11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="播放按钮"
+            android:padding="5dp"
+            android:src="@drawable/ic_play0" />
+
+        <ImageButton
+            android:id="@+id/imageButton33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="下一首按钮"
+            android:padding="5dp"
+            android:src="@drawable/ic_next5" />
+
+        <!-- 播放列表按钮 -->
+        <ImageButton
+            android:id="@+id/imageButton22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="播放列表按钮"
+            android:padding="5dp"
+            android:src="@drawable/ic_list1" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dynamicRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="852dp"
+        android:layout_above="@id/playerLayout"
+    android:layout_marginBottom="10dp"
+    android:padding="0dp" />
+
+    <!-- 添加动态按钮 -->
+
+    <!-- 底部导航栏 -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addDynamicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="111dp"
+        android:contentDescription="添加动态"
+        android:src="@drawable/ic_add" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        app:itemIconTint="@drawable/nav_item_colors"
+        app:itemTextColor="@drawable/nav_item_colors"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

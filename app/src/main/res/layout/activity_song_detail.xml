@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:background="@color/gray_color">
+
+    <!-- 返回箭头 -->
+
+    <!-- 歌曲信息部分 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="178dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/item_background"
+        android:clipToPadding="false"
+        android:elevation="8dp">
+
+        <!-- 歌曲图片 -->
+
+        <!-- 歌曲名称 -->
+
+        <ImageView
+            android:id="@+id/songImage1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="31dp"
+            android:src="@drawable/ic_music" />
+
+        <!-- 歌手名称 -->
+
+        <!-- 专辑名称 -->
+
+        <!-- 点赞按钮 -->
+
+        <TextView
+            android:id="@+id/songNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="26dp"
+            android:layout_toEndOf="@id/songImage1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Song Name"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/artistTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/songNameTextView"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="1dp"
+            android:layout_toEndOf="@id/songImage1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Artist Name"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/albumTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/artistTextView"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="1dp"
+            android:layout_toEndOf="@id/songImage1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Album Name"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/likeButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="7dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="点赞"
+            android:src="@drawable/ic_love" />
+
+        <!-- 点赞数 -->
+        <TextView
+            android:id="@+id/likeCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/likeButton"
+            android:layout_marginEnd="-62dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toStartOf="@id/likeButton"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <!-- 播放/暂停按钮 -->
+        <ImageButton
+            android:id="@+id/playPauseButton333"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="78dp"
+            android:layout_marginBottom="7dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="播放暂停按钮"
+            android:src="@drawable/ic_jia1" />
+
+        <ImageButton
+            android:id="@+id/detailBackButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="378dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="返回"
+            android:src="@drawable/ic_back" />
+    </RelativeLayout>
+
+    <!-- 评论区 -->
+
+    <!-- 底部导航栏 -->
+
+    <LinearLayout
+        android:id="@+id/commentBox"
+        android:layout_width="match_parent"
+        android:layout_height="638dp"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_marginBottom="-46dp"
+        android:background="@color/gray_color"
+        android:clipToPadding="false"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 评论标题 -->
+        <TextView
+            android:id="@+id/commentSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="评论"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+         />
+
+        <!-- 评论列表 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/commentRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:layout_marginBottom="8dp"
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
+
+        <!-- 输入评论 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/commentEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_background"
+                android:hint="输入评论..."
+                android:padding="9dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/commentSubmitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:background="@color/colorPrimary"
+                android:paddingHorizontal="16dp"
+                android:text="提交"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        app:itemIconTint="@drawable/nav_item_colors"
+        app:itemTextColor="@drawable/nav_item_colors"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

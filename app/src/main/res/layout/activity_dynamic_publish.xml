@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- 返回箭头 -->
+    <ImageButton
+        android:id="@+id/backArrow22"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="-13dp"
+        android:layout_marginLeft="-15dp"
+        android:contentDescription="返回按钮"
+        android:src="@drawable/ic_back"
+        android:background="@android:color/transparent" />
+
+    <!-- 文本输入 -->
+    <EditText
+        android:id="@+id/dynamicContentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="写下你的动态..."
+        android:gravity="top"
+        android:lines="5"
+        android:background="@drawable/edittext_background" />
+
+    <!-- 已选音乐 -->
+    <TextView
+        android:id="@+id/selectedMusicTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="未选择音乐"
+        android:textSize="14sp" />
+
+    <!-- 已选音乐 -->
+    <TextView
+        android:id="@+id/selectedMusicTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/selectedMusicfilePath"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp" />
+
+    <!-- 按钮：添加音乐 -->
+    <Button
+        android:id="@+id/addMusicButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="添加音乐"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_background" />
+
+    <!-- 按钮：发布 -->
+    <Button
+        android:id="@+id/publishButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:background="@drawable/btn_background"
+        android:text="发布"
+        android:textColor="@android:color/white" />
+</LinearLayout>
